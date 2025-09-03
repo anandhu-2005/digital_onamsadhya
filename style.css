@@ -126,12 +126,44 @@ button:hover {
 
 /* Media query for small screens */
 @media (max-width: 600px) {
-  #dishes img {
-    width: 10%; /* slightly larger dishes */
-  }
+  /* Reposition ALL 29 dishes for phone layout */
+  .dish1  { top: 40%; left: 6%; }
+  .dish2  { top: 38%; left: 14%; }
+  .dish3  { top: 55%; left: 8%; }
+  .dish4  { top: 50%; left: 16%; width: 14% !important; }
+  .dish5  { top: 62%; left: 22%; }
+  .dish6  { top: 28%; left: 12%; }
+  .dish7  { top: 18%; left: 20%; }
+  .dish8  { top: 18%; left: 28%; }
+  .dish9  { top: 18%; left: 36%; }
+  .dish10 { top: 38%; left: 22%; }
 
-  button {
-    padding: 10px 18px;
+  .dish11 { top: 36%; left: 30%; width: 10% !important; }
+  .dish12 { top: 34%; left: 38%; width: 10% !important; }
+  .dish13 { top: 18%; left: 52%; width: 10% !important; }
+  .dish14 { top: 18%; left: 44%; }
+
+  .dish15 { top: 32%; left: 46%; width: 14% !important; } /* Rice */
+  .dish16 { top: 28%; left: 54%; width: 10% !important; }
+  .dish17 { top: 34%; left: 62%; width: 12% !important; }
+  .dish18 { top: 22%; left: 42%; width: 9% !important; }
+
+  .dish19 { top: 54%; left: 32%; width: 34% !important; }
+  .dish20 { top: 57%; left: 70%; width: 16% !important; }
+  .dish21 { top: 56%; left: 60%; width: 16% !important; }
+
+  .dish22 { top: 62%; left: 8%; }
+  .dish23 { top: 15%; left: 60%; }
+  .dish24 { top: 15%; left: 68%; }
+  .dish25 { top: 18%; left: 76%; }
+
+  .dish26 { top: 28%; left: 70%; }
+  .dish27 { top: 66%; left: 25%; }
+  .dish28 { top: 52%; left: 24%; width: 12% !important; }
+  .dish29 { top: 34%; left: 76%; }
+
+  #dishes img {
+    width: 12%; /* slightly larger for phones */
   }
 }
 
