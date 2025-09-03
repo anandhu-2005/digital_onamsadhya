@@ -55,7 +55,7 @@ h1 {
 
 /* Example dish placements (use % instead of px for scaling) */
 .dish1 { top: 38%; left: 8%; }
-.dish2 { top: 32%; left: 15%; }
+.dish2 { top: 35%; left: 15%; }
 .dish3 { top: 53%; left: 10%; }
 .dish4 { top: 48%; left: 15%; width: 12% !important; }
 .dish5 { top: 59%; left: 19%; }
@@ -128,7 +128,7 @@ button:hover {
 @media (max-width: 300px) {
   /* Reposition ALL 29 dishes for phone layout */
   .dish1  { top: 40%; left: 6%; }
-  .dish2  { top: 32%; left: 14%; width: 10% !important; }
+  .dish2  { top: 33%; left: 14%; width: 10% !important; }
   .dish3  { top: 55%; left: 8%; }
   .dish4  { top: 50%; left: 16%; width: 14% !important; }
   .dish5  { top: 62%; left: 22%; }
