@@ -1,0 +1,152 @@
+/* General page */
+body {
+  background-image: linear-gradient(135deg, #FFA8A8 10%, #FCFF00 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #b58900;
+  text-shadow: 1px 1px #eee;
+  font-size: clamp(22px, 4vw, 36px); /* scales with screen */
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+}
+
+#leaf {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  transform-origin: bottom center;
+  transform: scaleY(0); /* folded initially */
+  transition: transform 1.5s ease-in-out;
+}
+
+#leaf.unfold {
+  transform: scaleY(1);
+}
+
+/* Dishes default */
+#dishes img {
+  position: absolute;
+  width: 8%;     /* relative size, not fixed px */
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.8s, transform 0.3s;
+  cursor: pointer;
+}
+
+#dishes img:hover {
+  transform: scale(1.2);
+}
+
+/* Example dish placements (use % instead of px for scaling) */
+.dish1 { top: 38%; left: 8%; }
+.dish2 { top: 36%; left: 15%; }
+.dish3 { top: 53%; left: 10%; }
+.dish4 { top: 48%; left: 15%; width: 12% !important; }
+.dish5 { top: 59%; left: 19%; }
+
+.dish6 { top: 30%; left: 15%; }
+.dish7 { top: 20%; left: 22%; }
+.dish8 { top: 20%; left: 31%; }
+.dish9 { top: 20%; left: 38%; }
+.dish10 { top: 40%; left: 23%; }
+
+.dish11 { top: 37%; left: 31%; width: 8% !important; }
+.dish12 { top: 35%; left: 39%; width: 9% !important; }
+.dish13 { top: 19.5%; left: 54%; width: 9% !important; }
+.dish14 { top: 20%; left: 46%; }
+
+.dish15 { top: 34%; left: 47%; width: 10% !important; } /* Rice, larger */
+.dish16 { top: 29%; left: 55%; width: 9% !important; }
+.dish17 { top: 35%; left: 62%; width: 10% !important; }
+.dish18 { top: 23%; left: 44%; width: 8% !important; }
+
+.dish19 { top: 53%; left: 35%; width: 30% !important; }
+.dish20 { top: 55%; left: 70%; width: 15% !important; }
+.dish21 { top: 55%; left: 60%; width: 14% !important; }
+
+.dish22 { top: 60%; left: 11%; }
+.dish23 { top: 16.5%; left: 62%; }
+.dish24 { top: 16.5%; left: 69%; }
+.dish25 { top: 19.5%; left: 76%; }
+
+.dish26 { top: 29%; left: 71%; }
+.dish27 { top: 65%; left: 26%; }
+.dish28 { top: 51%; left: 26%; width: 11% !important; }
+.dish29 { top: 35%; left: 76%; }
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: clamp(12px, 2vw, 16px);
+  line-height: 1.4;
+  max-width: 220px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2000;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: clamp(14px, 3vw, 18px);
+  border: none;
+  border-radius: 8px;
+  background: #268bd2;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0f5c99;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  #dishes img {
+    width: 10%; /* slightly larger dishes */
+  }
+
+  button {
+    padding: 10px 18px;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 250px;   /* adjust size */
+  height: auto;
+  z-index: 1000; /* make sure it stays above leaf & dishes */
+}
+.symbol {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;   /* adjust size */
+  height: auto;
+  z-index: 1000; /* make sure it stays above leaf & dishes */
+}
